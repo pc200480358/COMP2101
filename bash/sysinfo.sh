@@ -1,10 +1,9 @@
 #!/bin/bash
-#going to bash directory
-hostname --fqdn
-#finding the hostname or dns domain name
-hostnamectl
-#finding the name and version of operating system
-ip addr
-#finding the ip address of the computer
-df
-#finding root filesystem free space in linux
+
+echo -e "report for myvm"
+echo ===============
+echo -e "fqdn:\t\t"`hostname --fqdn`
+echo -e `hostnamectl | grep "Operating System"`
+echo -e "System Main IP:\t\t"`hostname -I`
+echo -e "Root Filesystem Free Space:\t\t" `df -h /root`
+echo ===============
